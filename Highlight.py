@@ -1,16 +1,3 @@
-"""
-# Project: Image Extraction
-# Description: The program will allow the user to color a region
-#              from an image and then will replace the pixels in
-#              that area with what it estimates would be in that
-#              location of the image.
-#
-# Contributor: Salvador Ramirez
-# Contributor: Eliasar Gandara
-#
-# Date Created: 2/25/15
-# Last Modified: 2/25/15
-"""
 #----------Imported to get file directory---
 from Tkinter import *
 from tkFileDialog import askopenfilename
@@ -40,17 +27,18 @@ def main():
     screen = display.set_mode((width, height))  # Give us a nice window
 
     display.set_caption('Sathya Project')
-    clock = pygame.time.Clock()
+    
     keepGoing = True
     lineStart = (0, 0)
-    drawColor = (255, 255, 255)
+    drawColor = (0, 0, 255)
     lineWidth = 7
 
     screen.blit(background, (0,0))          #sets background
     pygame.display.flip()
     
     while keepGoing:
-        clock.tick(30)
+        
+        print screen.get_at((mouse.get_pos())) 
         
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -66,3 +54,7 @@ def main():
 
 
 main()
+
+
+
+
