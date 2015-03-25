@@ -86,7 +86,6 @@ def Painting(Big,Medium,Small,Red,Green,Blue):
 
         if pygame.mouse.get_pressed() == (0, 0, 1):# Ends the program when the user makes a right click
             keepGoing = False
-            exit()
             
         for event in pygame.event.get():
             
