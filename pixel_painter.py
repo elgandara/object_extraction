@@ -67,7 +67,7 @@ def Painting(Big,Medium,Small,Red,Green,Blue):
     elif(Green > 0):
         drawColor = (0, 255, 0)# Setthe Green color
     else:
-        drawColor = (100,34,56)# sets the default brown color
+        drawColor = (255,255,255)# sets the default white color
     if(Big > 0):
         lineWidth = 30 # sets the Big brush
     elif(Medium > 0):
