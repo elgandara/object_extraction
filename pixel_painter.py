@@ -40,7 +40,9 @@ def Blue():
 def ExitChoice():#function allows user to choose a picture
     Painting(Big.count, Medium.count, Small.count, Red.count, Green.count, Blue.count)
     print Big.count, Medium.count, Small.count, Red.count, Green.count, Blue.count
-    exit()
+    print "Made it to quit"
+    app.quit()
+    app.destroy()
 
 #--------------------------------------
 def Painting(Big,Medium,Small,Red,Green,Blue):
@@ -98,10 +100,13 @@ def Painting(Big,Medium,Small,Red,Green,Blue):
         pygame.display.flip()
         #image.save(screen, "drawing.png")
     image.save(screen, "drawing.png")
+    
+
+    
         
 def Gui():#-----------Function creates GUI with choices--------------------------
     
-    app = Tk()
+    #app = Tk()
     app.title("Choose brush size and color")# Title of the GUI
     app.geometry("400x200")# size of the GUI
 
@@ -115,12 +120,16 @@ def Gui():#-----------Function creates GUI with choices-------------------------
     radio1 = Radiobutton(app, text = "Blue", value = "Blue", variable = relStatus, command = Blue).pack()
     radio1 = Radiobutton(app, text = "Choose Picture", value = "Choose Picture", variable = relStatus, command = ExitChoice).pack()
     app.mainloop()
-    exit()
+
+    
     #---------------------------------------------------------------------------------
 
 def main():
+    app = Tk()
     Gui()
 
+    
+app = Tk()
 main()
 
 
