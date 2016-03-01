@@ -139,7 +139,7 @@ def ChooseBrushColor():
     radio1 = Radiobutton(app, text = "Blue", value = "Blue", variable = relStatus, command = Blue).pack(anchor = W)
     radio1 = Radiobutton(app, text = "Choose Picture", value = "Choose Picture", variable = relStatus, command = ExitChoice).pack(anchor = W)
 
-   
+    Label(app,text="Choose brush size and color", justify = LEFT, padx = 20).pack()
 def Gui():#-----------Function creates GUI with choices--------------------------
     
     ChooseBrushSize()
